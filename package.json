@@ -1,0 +1,19 @@
+{
+  "name": "CodemotionMilan2015",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node_modules/react-native/packager/packager.sh",
+
+    "bundle-ios": "react-native bundle --entry-file index.ios.js --platform ios --bundle-output ios/main.jsbundle --dev false",
+
+    "bundle-android": "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
+    "build-android": "cd android && ./gradlew assembleRelease",
+    "install-android": "cd android && ./gradlew installRelease"
+  },
+  "dependencies": {
+    "react-native": "^0.14.2",
+    "react-native-vector-icons": "^0.8.4",
+    "react-native-webview-android": "^1.0.9"
+  }
+}
