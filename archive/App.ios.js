@@ -1,4 +1,4 @@
-var React = require('react-native');
+import React from 'react-native';
 var {
   Navigator,
   Text,
@@ -63,7 +63,7 @@ var App = React.createClass({
 });
 
 var TabNavigationBar = React.createClass({
-  getInitialState: function() {
+  getInitialState() {
       return {
         tabIndex: 0
       }

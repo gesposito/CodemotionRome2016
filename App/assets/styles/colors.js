@@ -1,21 +1,18 @@
-var React = require('react-native');
-
 module.exports = {
   website: {
-    orange: "#FF5C00",
-    blue: "#0E1E30",
-    grey: "#EBEDEE"
+    orange: '#FF5C00',
+    blue: '#0E1E30',
+    grey: '#EBEDEE',
   },
   newsletter: {
-    green: "#00C56A",
-    blue: "#00A3E5",
+    green: '#00C56A',
+    blue: '#00A3E5',
   },
   logo: {
-    grey: "#424244",
-    white: "#FFF",
-  }
+    grey: '#424244',
+    white: '#FFF',
+  },
 };
-
 
 /*
 
@@ -65,4 +62,5 @@ Startup
 '#034748',
 
 ]
+
 */

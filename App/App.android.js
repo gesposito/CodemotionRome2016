@@ -1,45 +1,19 @@
-var React = require('react-native');
-var {
+import React, {
   Navigator,
-  Text,
-  View,
   DrawerLayoutAndroid,
-  BackAndroid
-} = React;
+  BackAndroid,
+} from 'react-native';
 
-var Routes = require('./Navigation/Routes');
-var NavigationBarRouteMapper = require('./Navigation/NavigationBarRouteMapper');
-var NavigationView = require('./Navigation/NavigationView');
+import Routes from './Navigation/Routes';
+import NavigationBarRouteMapper from './Navigation/NavigationBarRouteMapper';
+import NavigationView from './Navigation/NavigationView';
 
-var colors = require('./assets/styles/colors');
-var styles = require('./Navigation/NavigationBar.styles');
+import styles from './Navigation/NavigationBar.styles';
 
-var _navigator;
+let _navigator;
 
-var App = React.createClass({
-  render: function() {
-    return (
-      <DrawerLayoutAndroid
-        drawerWidth={250}
-        drawerPosition={DrawerLayoutAndroid.positions.Left}
-        renderNavigationView={() =>
-          <NavigationView
-            ref={(navView) => {
-              this._navView = navView;
-            }}
-            getNavigator={this.getNavigator}
-            getDrawer={this.getDrawer} />
-        }
-        ref={(drawer) => {
-          this._drawer = drawer;
-        }}
-        onDrawerStateChanged={this.onDrawerStateChanged}>
-        {this.renderNavigation( Routes.main.home )}
-      </DrawerLayoutAndroid>
-    );
-  },
-
-  renderNavigation: function() {
+const App = React.createClass({
+  renderNavigation() {
     return (
       <Navigator
         initialRoute={Routes.main.schedule}
@@ -67,33 +41,57 @@ var App = React.createClass({
     );
   },
 
-  renderScene: function(route, navigator) {
+  render() {
+    return (
+      <DrawerLayoutAndroid
+        drawerWidth={250}
+        drawerPosition={DrawerLayoutAndroid.positions.Left}
+        renderNavigationView={() =>
+          <NavigationView
+            ref={(navView) => {
+              this._navView = navView;
+            }}
+            getNavigator={this.getNavigator}
+            getDrawer={this.getDrawer}
+          />
+        }
+        ref={(drawer) => {
+          this._drawer = drawer;
+        }}
+        onDrawerStateChanged={this.onDrawerStateChanged}
+      >
+        {this.renderNavigation(Routes.main.home)}
+      </DrawerLayoutAndroid>
+    );
+  },
+
+  renderScene(route, navigator) {
     return (
       <route.component route={route} navigator={navigator} />
     );
   },
 
-  getNavigator: function() {
+  onDrawerStateChanged() {
+    this.getNavView().onDrawerStateChanged();
+  },
+
+  getNavigator() {
     return this._navigator;
   },
 
-  getDrawer: function() {
+  getDrawer() {
     return this._drawer;
   },
 
-  getNavView: function() {
+  getNavView() {
     return this._navView;
   },
-
-  onDrawerStateChanged: function() {
-    this.getNavView().onDrawerStateChanged();
-  }
 
 });
 
 BackAndroid.addEventListener('hardwareBackPress', () => {
-  if (_navigator.getCurrentRoutes().length === 1  ) {
-     return false;
+  if (_navigator.getCurrentRoutes().length === 1) {
+    return false;
   }
   _navigator.pop();
   return true;

@@ -1,32 +1,31 @@
-var React = require('react-native');
-var {
+import {
   StyleSheet,
-  Platform
-} = React;
+  Platform,
+} from 'react-native';
 
-var isAndroid = Platform.OS === 'android';
-var colors = require('../assets/styles/colors');
+const isAndroid = Platform.OS === 'android';
+import colors from '../assets/styles/colors';
 
 module.exports = StyleSheet.create({
-    navBarContainer: {
-      backgroundColor: colors.logo.grey,
-      borderBottomColor: colors.website.grey,
-    },
+  navBarContainer: {
+    backgroundColor: colors.logo.grey,
+    borderBottomColor: colors.website.grey,
+  },
 
-    navBarButton: {
-      margin: isAndroid ? 15 : 10,
-      color: colors.logo.white,
-    },
+  navBarButton: {
+    margin: isAndroid ? 15 : 10,
+    color: colors.logo.white,
+  },
 
-    navBarTitle: {
-      color: colors.logo.white,
-      marginTop: isAndroid ? 15 : 10,
-    },
+  navBarTitle: {
+    color: colors.logo.white,
+    marginTop: isAndroid ? 15 : 10,
+  },
 
-    navBarLogo: {
-      marginTop: isAndroid ? 10 : 5,
-      width: 216,
-      height: 38
-    },
+  navBarLogo: {
+    marginTop: isAndroid ? 10 : 5,
+    width: 216,
+    height: 38,
+  },
 
 });

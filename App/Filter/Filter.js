@@ -1,35 +1,34 @@
-var React = require('react-native');
-var {
+import React, {
   View,
   Text,
-  TouchableHighlight
-} = React;
+  TouchableHighlight,
+} from 'react-native';
 
-var styles = require('./Filter.styles');
+import styles from './Filter.styles';
 
-var Filter = React.createClass({
-  render: function() {
-    var filters = FILTERS;
+const Filter = React.createClass({
+  render() {
     /*
       TODO Filters
     */
     return (
       <View style={styles.filterContainer}>
         <View>
-            {(filters).map((value, index) => {
-              return (
-                <View key={index}>
-                  <Text style={styles.filterItem}>
-                    {value}
-                  </Text>
-                </View>
-              );
-            })}
-            <TouchableHighlight
-              onPress={this.props.onSave}
-              underlayColor="#a9d9d4">
-                <Text >Close</Text>
-            </TouchableHighlight>
+          {(FILTERS).map((value, index) => {
+            return (
+              <View key={index}>
+                <Text style={styles.filterItem}>
+                  {value}
+                </Text>
+              </View>
+            );
+          })}
+          <TouchableHighlight
+            onPress={this.props.onSave}
+            underlayColor="#a9d9d4"
+          >
+            <Text >Close</Text>
+          </TouchableHighlight>
         </View>
       </View>
     );
@@ -37,7 +36,7 @@ var Filter = React.createClass({
 
 });
 
-var FILTERS = [
+const FILTERS = [
   'Languages',
   'Mobile',
   'Game Dev',
@@ -56,6 +55,6 @@ var FILTERS = [
   'Server-side',
   'Front-end',
   'Startup',
-]
+];
 
 module.exports = Filter;

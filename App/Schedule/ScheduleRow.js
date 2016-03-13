@@ -1,49 +1,40 @@
-var React = require('react-native');
-var {
+import React, {
   View,
   TouchableOpacity,
   Image,
-  Text
-} = React;
+  Text,
+} from 'react-native';
 
-var styles = require('./Schedule.styles');
-var colors = require('../assets/styles/colors');
+import styles from './Schedule.styles';
+import colors from '../assets/styles/colors';
 
-var Icon = require('react-native-vector-icons/Ionicons');
+import Icon from 'react-native-vector-icons/Ionicons';
 
-var ScheduleRow = React.createClass({
-  render: function() {
+const ScheduleRow = React.createClass({
+  renderTalk() {
     return (
-      <View style={styles.scheduleRowContainer}>
-        {this.props.rowData.title ? this.renderTalk() : this.renderInfo()}
-      </View>
-    );
-  },
-
-  renderTalk: function() {
-    return (
-      <TouchableOpacity onPress={
-          () => {
-            var Routes = require('../Navigation/Routes');
-            this.props.navigator.setState({link: this.props.rowData.link[0]});
-            this.props.navigator.push(Routes.side.talk);
-          }
-        }>
+      <TouchableOpacity
+        onPress={() => {
+          const Routes = require('../Navigation/Routes');
+          this.props.navigator.setState({link: this.props.rowData.link[0]});
+          this.props.navigator.push(Routes.side.talk);
+        }}
+      >
         <View style={styles.scheduleRowContent}>
           <View style={styles.scheduleRowLeft}>
             <Image
-              source={{uri: 'https://raw.githubusercontent.com/gesposito/codemotion_milan_2015_data/master/img/CDM_2013_logo_mini_web_80.png'}}
+              source={require('../assets/img/CDM_2013_logo_mini_web.png')}
               style={styles.scheduleRowImage}
             />
           </View>
           <View style={styles.scheduleRowCenter}>
-            <Text style={{color: colors.newsletter.green}}>
+            <Text style={{ color: colors.newsletter.green }}>
               {this.props.rowData.title}
             </Text>
-            <Text style={{color: colors.website.orange}}>
+            <Text style={{ color: colors.website.orange }}>
               {this.props.rowData.category}
             </Text>
-            <Text style={{color: colors.website.blue}}>
+            <Text style={{ color: colors.website.blue }}>
               {this.props.rowData.speaker}
             </Text>
 
@@ -55,22 +46,30 @@ var ScheduleRow = React.createClass({
       </TouchableOpacity>
     );
     /*
-    source={require('../assets/img/CDM_2013_logo_mini_web.png')}
+    source={{ uri: 'https://raw.githubusercontent.com/gesposito/codemotion_milan_2015_data/master/img/CDM_2013_logo_mini_web_80.png' }}
     */
   },
 
-  renderInfo: function() {
+  renderInfo() {
     return (
       <View style={styles.scheduleRowContent}>
         <View style={styles.scheduleRowInfo}>
-          <Text style={{color: colors.newsletter.blue}}>
+          <Text style={{ color: colors.newsletter.blue }}>
             {this.props.rowData.data}
           </Text>
 
         </View>
       </View>
     );
-  }
+  },
+
+  render() {
+    return (
+      <View style={styles.scheduleRowContainer}>
+        {this.props.rowData.title ? this.renderTalk() : this.renderInfo()}
+      </View>
+    );
+  },
 
 });
 

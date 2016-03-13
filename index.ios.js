@@ -1,14 +1,13 @@
 'use strict';
 
-var React = require('react-native');
-var {
+import {
   AppRegistry,
   Platform,
-  StatusBarIOS
-} = React;
+  StatusBarIOS,
+} from 'react-native';
 
-var App = require('./App/App')
+const App = require('./App/App');
 
-Platform.OS === 'ios' ? StatusBarIOS.setStyle('light-content', false): null;
+Platform.OS === 'ios' ? StatusBarIOS.setStyle('light-content', false) : null;
 
 AppRegistry.registerComponent('CodemotionMilan2015', () => App);

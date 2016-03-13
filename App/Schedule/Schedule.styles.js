@@ -1,29 +1,28 @@
-var React = require('react-native');
-var {
+import {
   StyleSheet,
-  Platform
-} = React;
+  Platform,
+} from 'react-native';
 
-var colors = require('../assets/styles/colors');
-var isAndroid = Platform.OS === 'android';
+import colors from '../assets/styles/colors';
+const isAndroid = Platform.OS === 'android';
 
 module.exports = StyleSheet.create({
   /* Container */
   scheduleContainer: {
     paddingTop: isAndroid ? 56 : 64,
-    backgroundColor: colors.logo.white
+    backgroundColor: colors.logo.white,
   },
 
   /* Controls */
   scheduleControls: {
     flexDirection: 'row',
-    backgroundColor: colors.logo.grey
+    backgroundColor: colors.logo.grey,
   },
 
   scheduleControl: {
     flex: 1,
     alignItems: 'center',
-    padding: 15
+    padding: 15,
   },
 
   scheduleControlText: {
@@ -42,7 +41,7 @@ module.exports = StyleSheet.create({
   },
   scheduleListHeaderText: {
     color: colors.logo.white,
-    fontWeight: '600'
+    fontWeight: '600',
   },
 
   /* Row */
@@ -66,12 +65,12 @@ module.exports = StyleSheet.create({
     borderColor: colors.website.orange,
     borderWidth: 2,
     width: 60,
-    height: 60
+    height: 60,
   },
 
   scheduleRowCenter: {
     flex: 3,
-    paddingLeft: 15
+    paddingLeft: 15,
   },
   scheduleRowInfo: {
     flex: 3,
@@ -79,13 +78,12 @@ module.exports = StyleSheet.create({
 
   scheduleRowRight: {
     flexDirection: 'column',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
 
   /* Footer */
   scheduleListFooter: {
-    height: 48
-
+    height: 48,
   },
 
 });

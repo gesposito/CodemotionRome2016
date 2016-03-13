@@ -1,19 +1,18 @@
-var React = require('react-native');
-var {
+import React, {
   View,
   Text,
-  Image
-} = React;
+  Image,
+} from 'react-native';
 
-var styles = require('./Speakers.styles');
+import styles from './Speakers.styles';
 
-var SpeakerRow = React.createClass({
-  render: function() {
+const SpeakerRow = React.createClass({
+  render() {
     return (
       <View style={styles.speakerRowContainer}>
         <View style={styles.speakerRowTop}>
           <Image
-            source={{uri: this.props.liquid_image}}
+            source={{ uri: this.props.liquid_image }}
             style={styles.speakerRowImage}
           />
         </View>
@@ -25,7 +24,7 @@ var SpeakerRow = React.createClass({
 
       </View>
     );
-  }
+  },
 });
 
 module.exports = SpeakerRow;

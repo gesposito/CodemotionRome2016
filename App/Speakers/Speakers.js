@@ -1,29 +1,40 @@
-var React = require('react-native');
-var {
+import React, {
   ScrollView,
-  ListView,
   View,
-  Text
-} = React;
+} from 'react-native';
 
-var SpeakerRow = require('./SpeakerRow');
-var Loader = require('../Loader/Loader');
+import SpeakerRow from './SpeakerRow';
+import Loader from '../Loader/Loader';
 
-var styles = require('./Speakers.styles');
+import styles from './Speakers.styles';
 
-var Speakers = React.createClass({
-  getInitialState: function() {
+const Speakers = React.createClass({
+  getInitialState() {
     return {
       loading: true,
-      speakers: []
-    }
+      speakers: [],
+    };
   },
 
-  componentDidMount: function() {
-      this.fetchData();
+  componentDidMount() {
+    this.fetchData();
   },
 
-  render: function() {
+  fetchData() {
+    const API_URL = 'https://raw.githubusercontent.com/gesposito/codemotion_milan_2015_data/master/speakers.json';
+    fetch(API_URL).then(
+      (response) => response.json()
+    ).then(
+      (responseData) => {
+        this.setState({
+          speakers: responseData,
+        });
+        this.setState({ loading: false });
+      }
+    );
+  },
+
+  render() {
     if (this.state.loading) {
       return (
         <Loader />
@@ -33,27 +44,10 @@ var Speakers = React.createClass({
     return (
       <View style={styles.speakerContainer}>
         <ScrollView>
-          {(this.state.speakers).map((speaker, index) => {
-            return <SpeakerRow key={index} {...speaker} />
-          })}
+          {(this.state.speakers).map((speaker, index) => <SpeakerRow key={index} {...speaker} />)}
         </ScrollView>
       </View>
     );
-  },
-
-  fetchData: function () {
-    var API_URL = 'https://raw.githubusercontent.com/gesposito/codemotion_milan_2015_data/master/speakers.json';
-    fetch(API_URL).then(
-      (response) => response.json()
-    ).then(
-      (responseData) => {
-        this.setState({
-          speakers : responseData
-        });
-        this.setState({ loading: false });
-      }
-    );
-
   },
 });
 

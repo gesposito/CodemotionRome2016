@@ -2,7 +2,7 @@
   See https://github.com/facebook/react-native/blob/master/Examples/UIExplorer/Navigator/NavigationBarSample.js
 */
 
-var React = require('react-native');
+import React from 'react-native';
 var {
   View,
   Text,

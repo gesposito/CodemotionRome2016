@@ -1,24 +1,23 @@
-var React = require('react-native');
-var {
+import {
   StyleSheet,
   Platform,
-  Dimensions
-} = React;
+  Dimensions,
+} from 'react-native';
 
-var colors = require('../assets/styles/colors');
-var isAndroid = Platform.OS === 'android';
+import colors from '../assets/styles/colors';
+const isAndroid = Platform.OS === 'android';
 
 module.exports = StyleSheet.create({
   /* Container */
   filterContainer: {
     height: Dimensions.get('window').height,
     justifyContent: 'center',
-    backgroundColor: colors.logo.white
+    backgroundColor: colors.logo.white,
   },
 
   filterItem: {
     flex: 1,
-    color: '#000'
+    color: '#000',
   },
 
 });

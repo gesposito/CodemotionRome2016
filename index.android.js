@@ -1,10 +1,9 @@
 'use strict';
 
-var React = require('react-native');
-var {
-  AppRegistry
-} = React;
+import {
+  AppRegistry,
+} from 'react-native';
 
-var App = require('./App/App')
+const App = require('./App/App');
 
 AppRegistry.registerComponent('CodemotionMilan2015', () => App);

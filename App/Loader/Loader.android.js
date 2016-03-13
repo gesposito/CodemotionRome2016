@@ -1,15 +1,13 @@
-var React = require('react-native');
-var {
+import React, {
   View,
-  Text
-} = React;
+} from 'react-native';
 
-var ProgressBar = require('ProgressBarAndroid');
+const ProgressBar = require('ProgressBarAndroid');
 
-var styles = require('./Loader.styles');
+const styles = require('./Loader.styles');
 
-var Loader = React.createClass({
-  render: function() {
+const Loader = React.createClass({
+  render() {
     return (
       <View style={styles.loaderContainer}>
         <ProgressBar
@@ -18,7 +16,7 @@ var Loader = React.createClass({
         />
       </View>
     );
-  }
+  },
 
 });
 

@@ -1,12 +1,11 @@
-var React = require('react-native');
-var {
+import {
   StyleSheet,
   Platform,
-  Dimensions
-} = React;
+  Dimensions,
+} from 'react-native';
 
-var colors = require('../assets/styles/colors');
-var isAndroid = Platform.OS === 'android';
+import colors from '../assets/styles/colors';
+const isAndroid = Platform.OS === 'android';
 
 module.exports = StyleSheet.create({
   /* Container */
@@ -20,8 +19,7 @@ module.exports = StyleSheet.create({
 
   loaderSpinner: {
     flex: 1,
-    top: isAndroid ? (Dimensions.get('window').height/3) : 0,
-  }
-
+    top: isAndroid ? (Dimensions.get('window').height / 3) : 0,
+  },
 
 });

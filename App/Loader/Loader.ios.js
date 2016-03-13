@@ -1,24 +1,22 @@
-var React = require('react-native');
-var {
+import React, {
   View,
-  Text,
-  ActivityIndicatorIOS
-} = React;
+  ActivityIndicatorIOS,
+} from 'react-native';
 
-var styles = require('./Loader.styles');
+import styles from './Loader.styles';
 
-var Loader = React.createClass({
-  render: function() {
+const Loader = React.createClass({
+  render() {
     return (
       <View style={styles.loaderContainer}>
         <ActivityIndicatorIOS
-          animating={true}
+          animating
           size="large"
           style={styles.loaderSpinner}
         />
       </View>
     );
-  }
+  },
 
 });
 

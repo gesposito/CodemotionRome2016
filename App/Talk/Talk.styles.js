@@ -1,12 +1,10 @@
-var React = require('react-native');
-var {
+import {
   StyleSheet,
   Platform,
-  Dimensions
-} = React;
+  Dimensions,
+} from 'react-native';
 
-var colors = require('../assets/styles/colors');
-var isAndroid = Platform.OS === 'android';
+const isAndroid = Platform.OS === 'android';
 
 module.exports = StyleSheet.create({
   /* Container */
@@ -17,9 +15,8 @@ module.exports = StyleSheet.create({
 
   webView: {
     flex: 1,
-    //backgroundColor: colors.logo.grey,
+    // backgroundColor: colors.logo.grey,
     height: Dimensions.get('window').height - (isAndroid ? 112 : 110),
-  }
-
+  },
 
 });

@@ -1,20 +1,18 @@
-var React = require('react-native');
-var {
+import {
   StyleSheet,
-  Platform
-} = React;
+} from 'react-native';
 
-var colors = require('../assets/styles/colors');
+import colors from '../assets/styles/colors';
 
 module.exports = StyleSheet.create({
   navViewContainer: {
     backgroundColor: colors.logo.grey,
-    flex: 1
+    flex: 1,
   },
   navViewItemContainer: {
     borderBottomColor: colors.logo.grey,
     padding: 15,
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
 
   navViewIcon: {
@@ -23,18 +21,17 @@ module.exports = StyleSheet.create({
     flex: 1,
   },
   navViewIconMic: {
-    marginLeft: 5
+    marginLeft: 5,
   },
   navViewItem: {
     color: colors.website.grey,
     backgroundColor: colors.logo.grey,
-    flex: 8
+    flex: 8,
   },
 
   navViewItemActive: {
     fontWeight: '600',
     color: colors.logo.white,
   },
-
 
 });

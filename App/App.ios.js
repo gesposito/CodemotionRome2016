@@ -1,40 +1,38 @@
-var React = require('react-native');
-var {
+import React, {
   Navigator,
-  Text,
-  View,
-  TabBarIOS
-} = React;
+  TabBarIOS,
+} from 'react-native';
 
-var Routes = require('./Navigation/Routes');
-var NavigationBarRouteMapper = require('./Navigation/NavigationBarRouteMapper');
-var NavigationView = require('./Navigation/NavigationView');
+import Routes from './Navigation/Routes';
+import NavigationBarRouteMapper from './Navigation/NavigationBarRouteMapper';
 
-var Icon = require('react-native-vector-icons/Ionicons');
+import Icon from 'react-native-vector-icons/Ionicons';
 
-var colors = require('./assets/styles/colors');
-var styles = require('./Navigation/NavigationBar.styles');
+import colors from './assets/styles/colors';
+import styles from './Navigation/NavigationBar.styles';
 
-var App = React.createClass({
-  getInitialState: function() {
+const App = React.createClass({
+  getInitialState() {
     return {
       tabIndex: 0,
     };
   },
 
-  render: function() {
+  render() {
     return (
       <TabBarIOS
         barTintColor={colors.logo.grey}
         tintColor={colors.logo.white}
-        translucent={false}>
+        translucent={false}
+      >
         <Icon.TabBarItem
           iconName="calendar"
           title="Schedule"
           selected={this.state.tabIndex === 0}
           onPress={() => {
             this.setState({ tabIndex: 0 });
-          }}>
+          }}
+        >
           <Scene scene={Routes.main.schedule} />
         </Icon.TabBarItem>
         <Icon.TabBarItem
@@ -43,7 +41,8 @@ var App = React.createClass({
           selected={this.state.tabIndex === 1}
           onPress={() => {
             this.setState({ tabIndex: 1 });
-          }}>
+          }}
+        >
           <Scene scene={Routes.main.speakers} />
         </Icon.TabBarItem>
       </TabBarIOS>
@@ -53,14 +52,14 @@ var App = React.createClass({
 
 });
 
-var Scene = React.createClass({
-  renderScene: function(route, navigator) {
+const Scene = React.createClass({
+  renderScene(route, navigator) {
     return (
       <route.component route={route} navigator={navigator} />
     );
   },
 
-  render: function() {
+  render() {
     return (
       <Navigator
         initialRoute={this.props.scene}
@@ -81,7 +80,7 @@ var Scene = React.createClass({
         }}
       />
     );
-  }
+  },
 
 });
 

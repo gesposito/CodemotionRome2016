@@ -1,17 +1,16 @@
-var React = require('react-native');
-var {
+import React, {
   View,
   Text,
   TouchableHighlight,
   Platform,
   WebView
-} = React;
+} from 'react-native';
 
-var styles = require('./Talk.styles');
-var isAndroid = Platform.OS === 'android';
+import styles from './Talk.styles';
+const isAndroid = Platform.OS === 'android';
 
-var Talk = React.createClass({
-  render: function() {
+const Talk = React.createClass({
+  render() {
     return (
       <View style={styles.talkContainer}>
         <WebView
@@ -19,15 +18,15 @@ var Talk = React.createClass({
           injectedJavaScript={injectedJavaScript}
           automaticallyAdjustContentInsets={false}
           source={{ uri: this.props.navigator.state.link }}
-          startInLoadingState={true}
+          startInLoadingState
         />
       </View>
     );
-  }
+  },
 
 });
 
-var injectedJavaScript = `
+const injectedJavaScript = `
   document.getElementsByClassName("detail-talk")[0].style.maxWidth = "none";
   var link = document.createElement( "link" );
   link.href = "http://milan2015.codemotionworld.com/wp-content/themes/event/css/main.css";

@@ -1,20 +1,19 @@
-var React = require('react-native');
-var {
+import {
   StyleSheet,
   Platform,
-  Dimensions
-} = React;
+  Dimensions,
+} from 'react-native';
 
-var colors = require('../assets/styles/colors');
-var isAndroid = Platform.OS === 'android';
-var sizeRatio = (Dimensions.get('window').width) * 3/5;
+import colors from '../assets/styles/colors';
+const isAndroid = Platform.OS === 'android';
+const sizeRatio = (Dimensions.get('window').width) * 3 / 5;
 
 module.exports = StyleSheet.create({
   /* Container */
   speakerContainer: {
     backgroundColor: colors.logo.white,
     paddingTop: isAndroid ? 56 : 64,
-    flex: 1
+    flex: 1,
   },
 
   /* Row */
@@ -25,7 +24,7 @@ module.exports = StyleSheet.create({
   speakerRowTop: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   speakerRowImage: {
     width: sizeRatio,
@@ -37,11 +36,11 @@ module.exports = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     padding: 10,
-    backgroundColor: colors.newsletter.green
+    backgroundColor: colors.newsletter.green,
   },
   speakerRowName: {
     color: colors.logo.white,
-    fontWeight: '600'
-  }
+    fontWeight: '600',
+  },
 
 });
