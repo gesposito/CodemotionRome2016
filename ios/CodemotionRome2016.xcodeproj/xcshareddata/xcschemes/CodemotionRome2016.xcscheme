@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "CodemotionMilan2015.app"
-               BlueprintName = "CodemotionMilan2015"
-               ReferencedContainer = "container:CodemotionMilan2015.xcodeproj">
+               BuildableName = "CodemotionRome2016.app"
+               BlueprintName = "CodemotionRome2016"
+               ReferencedContainer = "container:CodemotionRome2016.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "CodemotionMilan2015Tests.xctest"
-               BlueprintName = "CodemotionMilan2015Tests"
-               ReferencedContainer = "container:CodemotionMilan2015.xcodeproj">
+               BuildableName = "CodemotionRome2016Tests.xctest"
+               BlueprintName = "CodemotionRome2016Tests"
+               ReferencedContainer = "container:CodemotionRome2016.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "CodemotionMilan2015Tests.xctest"
-               BlueprintName = "CodemotionMilan2015Tests"
-               ReferencedContainer = "container:CodemotionMilan2015.xcodeproj">
+               BuildableName = "CodemotionRome2016Tests.xctest"
+               BlueprintName = "CodemotionRome2016Tests"
+               ReferencedContainer = "container:CodemotionRome2016.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "CodemotionMilan2015.app"
-            BlueprintName = "CodemotionMilan2015"
-            ReferencedContainer = "container:CodemotionMilan2015.xcodeproj">
+            BuildableName = "CodemotionRome2016.app"
+            BlueprintName = "CodemotionRome2016"
+            ReferencedContainer = "container:CodemotionRome2016.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "CodemotionMilan2015.app"
-            BlueprintName = "CodemotionMilan2015"
-            ReferencedContainer = "container:CodemotionMilan2015.xcodeproj">
+            BuildableName = "CodemotionRome2016.app"
+            BlueprintName = "CodemotionRome2016"
+            ReferencedContainer = "container:CodemotionRome2016.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "CodemotionMilan2015.app"
-            BlueprintName = "CodemotionMilan2015"
-            ReferencedContainer = "container:CodemotionMilan2015.xcodeproj">
+            BuildableName = "CodemotionRome2016.app"
+            BlueprintName = "CodemotionRome2016"
+            ReferencedContainer = "container:CodemotionRome2016.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.codemotionmilan2015">
+    package="com.codemotionrome2016">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

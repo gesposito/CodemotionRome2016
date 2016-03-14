@@ -12,8 +12,8 @@ import Loader from '../Loader/Loader';
 import styles from './Schedule.styles';
 
 const API_URL = [
-  'https://raw.githubusercontent.com/gesposito/codemotion_milan_2015_data/master/conference_day_1.json',
-  'https://raw.githubusercontent.com/gesposito/codemotion_milan_2015_data/master/conference_day_2.json',
+  'https://raw.githubusercontent.com/gesposito/codemotion_rome_2016_data/master/conference_day_1.json',
+  'https://raw.githubusercontent.com/gesposito/codemotion_rome_2016_data/master/conference_day_2.json',
 ];
 
 const Schedule = React.createClass({
@@ -71,7 +71,7 @@ const Schedule = React.createClass({
             }}
           >
             <Text style={[styles.scheduleControlText, this.state.activeIndex === 0 && styles.scheduleControlTextActive]}>
-              November 20
+              March 18
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -82,7 +82,7 @@ const Schedule = React.createClass({
             }}
           >
             <Text style={[styles.scheduleControlText, this.state.activeIndex === 1 && styles.scheduleControlTextActive]}>
-              November 21
+              March 19
             </Text>
           </TouchableOpacity>
         </View>

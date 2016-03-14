@@ -1,4 +1,4 @@
-package com.codemotionmilan2015;
+package com.codemotionrome2016;
 
 import com.facebook.react.ReactActivity;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -16,7 +16,7 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "CodemotionMilan2015";
+        return "CodemotionRome2016";
     }
 
     /**

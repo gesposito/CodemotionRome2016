@@ -1,4 +1,4 @@
-rootProject.name = 'CodemotionMilan2015'
+rootProject.name = 'CodemotionRome2016'
 
 include ':app'
 include ':react-native-vector-icons'

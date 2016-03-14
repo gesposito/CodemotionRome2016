@@ -6,4 +6,4 @@ import {
 
 const App = require('./App/App');
 
-AppRegistry.registerComponent('CodemotionMilan2015', () => App);
+AppRegistry.registerComponent('CodemotionRome2016', () => App);

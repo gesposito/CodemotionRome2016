@@ -21,7 +21,7 @@ const Speakers = React.createClass({
   },
 
   fetchData() {
-    const API_URL = 'https://raw.githubusercontent.com/gesposito/codemotion_milan_2015_data/master/speakers.json';
+    const API_URL = 'https://raw.githubusercontent.com/gesposito/codemotion_rome_2016_data/master/speakers.json';
     fetch(API_URL).then(
       (response) => response.json()
     ).then(
