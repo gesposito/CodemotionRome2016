@@ -42,7 +42,7 @@ const NavigationView = React.createClass({
             <Icon
               name="calendar"
               size={20}
-              style={[styles.navViewIcon, this.state.tabIndex === 0 && styles.navViewItemActive]}
+              style={styles.navViewIcon}
             />
             <Text style={[styles.navViewItem, this.state.tabIndex === 0 && styles.navViewItemActive]}>
               Schedule
@@ -59,8 +59,8 @@ const NavigationView = React.createClass({
             <Icon
               name="mic-c"
               size={20}
-               style={[styles.navViewIcon, styles.navViewIconMic, this.state.tabIndex === 1 && styles.navViewItemActive]}
-              />
+               style={styles.navViewIcon}
+            />
             <Text style={[styles.navViewItem, this.state.tabIndex === 1 && styles.navViewItemActive]}>
               Speakers
             </Text>

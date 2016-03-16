@@ -45,9 +45,6 @@ const ScheduleRow = React.createClass({
         </View>
       </TouchableOpacity>
     );
-    /*
-    source={{ uri: 'https://raw.githubusercontent.com/gesposito/codemotion_milan_2015_data/master/img/CDM_2013_logo_mini_web_80.png' }}
-    */
   },
 
   renderInfo() {

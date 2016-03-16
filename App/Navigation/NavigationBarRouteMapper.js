@@ -53,8 +53,6 @@ module.exports = {
       />
     );
     /*
-    source={{ uri: 'https://raw.githubusercontent.com/gesposito/codemotion_milan_2015_data/master/img/CDM_2013_logo_extended_web_grey_400.png' }}
-
     return (
       <Text style={[styles.navBarTitle, styles.navBarText]}>
         {route.title}

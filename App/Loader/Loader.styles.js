@@ -1,7 +1,6 @@
 import {
   StyleSheet,
   Platform,
-  Dimensions,
 } from 'react-native';
 
 import colors from '../assets/styles/colors';
@@ -19,7 +18,6 @@ module.exports = StyleSheet.create({
 
   loaderSpinner: {
     flex: 1,
-    top: isAndroid ? (Dimensions.get('window').height / 3) : 0,
   },
 
 });

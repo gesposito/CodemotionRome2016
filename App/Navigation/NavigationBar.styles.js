@@ -26,6 +26,8 @@ module.exports = StyleSheet.create({
     marginTop: isAndroid ? 10 : 5,
     width: 216,
     height: 38,
+    marginLeft: 38,
+    marginRight: 38,
   },
 
 });
